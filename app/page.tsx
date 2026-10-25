@@ -29,7 +29,7 @@ export default function HomePage() {
           {/* Hero Header Content */}
           <div className="mx-auto max-w-4xl text-center space-y-6">
             {/* School & Team Badge with Profile Picture */}
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card/90 px-4 py-1.5 text-xs sm:text-sm font-medium text-primary backdrop-blur-md shadow-md">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card/90 px-4 py-1.5 text-xs sm:text-sm font-medium text-primary backdrop-blur-md shadow-md animate-fade-in">
               <div className="relative h-5 w-5 rounded-full overflow-hidden border border-primary/60">
                 <Image
                   src={TEAM.logo}
@@ -45,7 +45,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-[1.15]">
+            <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-[1.15] animate-fade-in-delay-1">
               Milli İşletim Sistemi ve{" "}
               <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-amber-500 dark:from-sky-400 dark:via-cyan-300 dark:to-orange-400 bg-clip-text text-transparent">
                 Açık Kaynak
@@ -54,7 +54,7 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle in 1st Person Plural */}
-            <p className="mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
+            <p className="mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-delay-2">
               Biz {TEAM.school} Bilişim Teknolojileri Öğretmenimiz Gamze Yelken danışmanlığında;
               takım arkadaşlarımız Egemen Ömer Yılmazer, Emre Ekici ve Doruk Ata Kabadayı ile birlikte
               açık kaynak sistemler geliştiren liseli bir ekibiz. 2026 Şanlıurfa Pardus Hata Ayıklama
@@ -62,7 +62,7 @@ export default function HomePage() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row animate-fade-in-delay-3">
               <Button
                 asChild
                 size="lg"
@@ -91,7 +91,7 @@ export default function HomePage() {
           </div>
 
           {/* Carefully Framed Hero Header Banner Showcase */}
-          <div className="relative mx-auto max-w-6xl">
+          <div className="relative mx-auto max-w-6xl animate-fade-in-delay-2">
             <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card shadow-2xl transition-all">
               <div className="relative aspect-[16/7] w-full min-h-[260px] sm:min-h-[400px] lg:min-h-[480px]">
                 <Image
@@ -108,7 +108,7 @@ export default function HomePage() {
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl" />
 
                 {/* Top Overlay Badges */}
-                <div className="absolute top-3 left-3 sm:top-5 sm:left-5 flex flex-wrap gap-2">
+                <div className="absolute top-3 left-3 sm:top-5 sm:left-5 flex flex-wrap gap-2 animate-float">
                   <div className="flex items-center gap-2 rounded-full border border-amber-500/50 bg-slate-950/85 px-3.5 py-1.5 text-xs font-bold text-amber-400 backdrop-blur-md shadow-lg">
                     <Trophy className="size-4 text-amber-400" />
                     <span>2026 Şanlıurfa Finali • Türkiye 3.&apos;lüğümüz</span>
@@ -165,8 +165,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl pt-4">
             <div className="rounded-2xl border border-border/80 bg-card/60 backdrop-blur-md p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-border/60">
               {TEAM.stats.map((stat) => (
-                <div key={stat.label} className="text-center sm:px-4 pt-4 sm:pt-0 first:pt-0">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight">
+                <div key={stat.label} className="text-center sm:px-4 pt-4 sm:pt-0 first:pt-0 hover-lift group cursor-default">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight transition-transform duration-300 group-hover:scale-105">
                     {stat.value}
                   </div>
                   <div className="mt-1.5 text-xs sm:text-sm font-medium text-muted-foreground">
@@ -183,11 +183,11 @@ export default function HomePage() {
       {featured && (
         <section className="relative z-10 border-t border-border py-16 sm:py-20">
           <div className="page-container">
-            <div className="relative mx-auto max-w-5xl rounded-2xl sm:rounded-3xl border border-amber-600/35 dark:border-amber-500/40 bg-card/60 backdrop-blur-md p-8 sm:p-12 shadow-lg">
+            <div className="relative mx-auto max-w-5xl rounded-2xl sm:rounded-3xl border border-amber-600/35 dark:border-amber-500/40 bg-card/60 backdrop-blur-md p-8 sm:p-12 shadow-lg hover-lift">
               <div className="grid gap-8 lg:grid-cols-[1fr_auto] items-center">
                 <div className="space-y-4">
                   <div className="inline-flex items-center gap-2 rounded-full border border-amber-600/35 dark:border-amber-500/40 bg-amber-500/15 px-3.5 py-1 text-xs font-bold text-amber-900 dark:text-amber-400">
-                    <Trophy className="size-4" />
+                    <Trophy className="size-4 animate-bounce" />
                     <span>2026 Şanlıurfa Resmi Derecemiz</span>
                   </div>
 
@@ -291,7 +291,7 @@ export default function HomePage() {
             {/* Right Column: Editorial Focus Areas (Clean Row Layout) */}
             <div className="lg:col-span-7 divide-y divide-border border-y border-border">
               {DISCIPLINES.map((discipline) => (
-                <div key={discipline.id} className="py-5 space-y-2.5">
+                <div key={discipline.id} className="py-5 space-y-2.5 transition-colors duration-200 hover:bg-secondary/30 px-3 -mx-3 rounded-xl">
                   <h3 className="text-lg font-bold text-foreground">
                     {discipline.name}
                   </h3>

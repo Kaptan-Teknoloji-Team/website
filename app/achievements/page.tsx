@@ -24,10 +24,10 @@ export default function AchievementsPage() {
       {/* Primary Achievement Dossier (Architectural Layout, NO generic AI card) */}
       <article className="max-w-4xl space-y-12">
         {/* Milestone Banner */}
-        <div className="rounded-2xl border border-amber-500/40 bg-card/60 backdrop-blur-md p-8 sm:p-10 space-y-6">
+        <div className="rounded-2xl border border-amber-500/40 bg-card/60 backdrop-blur-md p-8 sm:p-10 space-y-6 hover-lift animate-fade-in">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/80 pb-6">
             <div className="flex items-center gap-3.5">
-              <div className="size-14 rounded-xl bg-amber-500/15 border border-amber-500/35 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
+              <div className="size-14 rounded-xl bg-amber-500/15 border border-amber-500/35 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0 animate-float">
                 <Trophy className="size-7" />
               </div>
               <div>

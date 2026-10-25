@@ -69,7 +69,7 @@ export default function AboutPage() {
               {TEAM_MEMBERS.map((member) => (
                 <div
                   key={member.id}
-                  className="py-5 sm:py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4 transition-colors hover:bg-secondary/20 px-2 rounded-lg"
+                  className="py-5 sm:py-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4 transition-all duration-200 hover:bg-secondary/30 px-3 rounded-xl hover:-translate-y-0.5"
                 >
                   <div className="space-y-2 max-w-xl">
                     <div className="flex flex-wrap items-center gap-2.5">
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
             <div className="divide-y divide-border border-y border-border">
               {DISCIPLINES.map((discipline) => (
-                <div key={discipline.id} className="py-5 space-y-2">
+                <div key={discipline.id} className="py-5 space-y-2 transition-colors duration-200 hover:bg-secondary/30 px-3 rounded-xl">
                   <h3 className="text-base font-bold text-foreground">
                     {discipline.name}
                   </h3>
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
         {/* Sidebar Info - Integrated Clean Panel (No floating AI card) */}
         <aside className="space-y-6">
-          <div className="rounded-2xl p-6 sm:p-7 border border-border bg-card/60 backdrop-blur-md space-y-6">
+          <div className="rounded-2xl p-6 sm:p-7 border border-border bg-card/60 backdrop-blur-md space-y-6 hover-lift">
             <h3 className="text-lg font-bold text-foreground">Takım Künyemiz</h3>
 
             <dl className="space-y-4 text-sm">
