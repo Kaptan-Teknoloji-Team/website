@@ -16,8 +16,12 @@ export function generateStaticParams() {
   return PROJECTS.map((project) => ({ slug: project.slug }));
 }
 
+interface ProjectPageProps {
+  params: Promise<{ slug: string }>;
+}
+
 export async function generateMetadata(
-  props: PageProps<"/projects/[slug]">
+  props: ProjectPageProps
 ): Promise<Metadata> {
   const { slug } = await props.params;
   const project = getProjectBySlug(slug);
@@ -34,7 +38,7 @@ function DetailSection({ title, children }: { title: string; children: React.Rea
   );
 }
 
-export default async function ProjectDetailPage(props: PageProps<"/projects/[slug]">) {
+export default async function ProjectDetailPage(props: ProjectPageProps) {
   const { slug } = await props.params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
