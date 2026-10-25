@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/join",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfZgQmxw3Qz-ZGjCDxS4XqCyhsLlAf5Gt2_q2wXAs_ILO_nQw/viewform",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

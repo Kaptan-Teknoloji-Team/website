@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* LIGHT THEME: Logo İlhamlı Serin Aero-Sky Paleti (Beyaz yerine sisli gök mavisi/arduvaz tonu, koyu lacivert tipografi) */
+  --background: #dce5ef;
+  --foreground: #091a30;
+
+  --card: #e8f0f8;
+  --card-foreground: #091a30;
+
+  --popover: #e8f0f8;
+  --popover-foreground: #091a30;
+
+  --primary: #0a4f8f;
+  --primary-foreground: #ffffff;
+
+  --secondary: #ccdbe8;
+  --secondary-foreground: #09203c;
+
+  --muted: #cfdde9;
+  --muted-foreground: #3f5570;
+
+  --accent: #fbeee4;
+  --accent-foreground: #9a3412;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #b8cde0;
+  --input: #b8cde0;
+  --ring: #0a4f8f;
+
+  --radius: 0.75rem;
+
+  --glass-nav-bg: rgba(220, 229, 239, 0.94);
+  --glass-nav-border: rgba(184, 205, 224, 0.9);
+
+  --glass-card-bg: rgba(232, 240, 248, 0.92);
+  --glass-card-border: rgba(184, 205, 224, 0.9);
+
+  --ambient-radial: radial-gradient(circle at 50% 0%, rgba(10, 79, 143, 0.16) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 75%);
+  --grid-line-color: rgba(10, 79, 143, 0.11);
+}
+
+:root.dark,
+html.dark {
+  /* DARK THEME: Logo İlhamlı Alacakaranlık Gökyüzü (Kullanıcının beğendiği derin lacivert, parlak buz beyazı ve belirgin grid) */
+  --background: #0c192c;
+  --foreground: #f0f5fa;
+
+  --card: #132640;
+  --card-foreground: #f0f5fa;
+
+  --popover: #132640;
+  --popover-foreground: #f0f5fa;
+
+  --primary: #38bdf8;
+  --primary-foreground: #081524;
+
+  --secondary: #1b3557;
+  --secondary-foreground: #d8e6f3;
+
+  --muted: #172c47;
+  --muted-foreground: #93a8c1;
+
+  --accent: #253347;
+  --accent-foreground: #fb923c;
+
+  --destructive: #f43f5e;
+  --destructive-foreground: #ffffff;
+
+  --border: #203c62;
+  --input: #203c62;
+  --ring: #38bdf8;
+
+  --glass-nav-bg: rgba(12, 25, 44, 0.92);
+  --glass-nav-border: rgba(32, 60, 98, 0.8);
+
+  --glass-card-bg: rgba(19, 38, 64, 0.85);
+  --glass-card-border: rgba(32, 60, 98, 0.85);
+
+  --ambient-radial: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.22) 0%, rgba(224, 122, 72, 0.09) 50%, transparent 75%);
+  --grid-line-color: rgba(56, 189, 248, 0.13);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Atmospheric visual styling utilities */
+.ambient-glow {
+  background: var(--ambient-radial);
+}
+
+.tech-grid {
+  background-image: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glass-nav {
+  background: var(--glass-nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-nav-border);
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-card-border);
+  box-shadow: 0 4px 20px -2px rgba(13, 30, 53, 0.05);
+}
+
+html.dark .glass-card {
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.45);
+}
+
+.glow-hover {
+  transition: all 0.25s ease;
+}
+
+.glow-hover:hover {
+  border-color: rgba(15, 86, 153, 0.45);
+  box-shadow: 0 0 25px -5px rgba(15, 86, 153, 0.18);
+}
+
+html.dark .glow-hover:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.18);
+}
+
+/* Responsive Container */
+.page-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-inline: 2.5rem;
+  }
 }
