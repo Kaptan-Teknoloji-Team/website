@@ -274,7 +274,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "gamze-yelken",
     name: "Gamze Yelken",
-    role: "Danışman Öğretmenimiz",
+    role: "Danışman",
     category: "advisor",
     subsystem: "Bilişim Teknolojileri & Proje Danışmanlığı",
     focus: "Okulumuz Bilişim Teknolojileri Öğretmeni ve takım danışmanımız. Yarışma, proje yönetimi ve teknik hedeflerimizde bize rehberlik ediyor.",
@@ -283,7 +283,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "egemen-omer-yilmazer",
     name: "Egemen Ömer Yılmazer",
-    role: "Takım Kaptanımız / Öğrenci",
+    role: "Takım Üyesi / Öğrenci",
     category: "lead",
     subsystem: "Pardus Hata Ayıklama & Sistem",
     focus: "Pardus araştırma süreçlerimizi, işletim sistemi mimarisi analizlerini ve ekip koordinasyonumuzu yürütüyor.",
@@ -292,7 +292,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "emre-ekici",
     name: "Emre Ekici",
-    role: "Takım Arkadaşımız / Öğrenci",
+    role: "Takım Üyesi / Öğrenci",
     category: "developer",
     subsystem: "Hata Ayıklama & Güvenlik Analizi",
     focus: "C ve sistem kodlarında bellek analizleri, GDB/Valgrind ile hata ayıklama ve yama (patch) geliştirme çalışmalarımızı üstleniyor.",
@@ -301,7 +301,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "doruk-ata-kabadayi",
     name: "Doruk Ata Kabadayı",
-    role: "Takım Arkadaşımız / Öğrenci",
+    role: "Takım Üyesi / Öğrenci",
     category: "developer",
     subsystem: "Açık Kaynak & Linux Sistemleri",
     focus: "GNU/Linux servisleri, Debian paket yönetimi, sistem güvenliği ve teknik analiz süreçlerimizi üstleniyor.",

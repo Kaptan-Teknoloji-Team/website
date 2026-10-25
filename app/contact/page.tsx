@@ -84,7 +84,7 @@ export default function ContactPage() {
             {SOCIAL_LINKS.length > 0 && (
               <div className="border-t border-border/80 pt-4 space-y-2.5">
                 <span className="block text-xs font-medium text-muted-foreground">
-                  Açık Kaynak Kod Depomuz
+                  Açık Kaynak Kod Sayfamız
                 </span>
                 <ul className="space-y-2">
                   {SOCIAL_LINKS.map((social) => (

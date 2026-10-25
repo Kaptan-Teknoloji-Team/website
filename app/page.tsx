@@ -152,7 +152,7 @@ export default function HomePage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 rounded-md bg-white/10 px-2.5 py-1 text-slate-200 hover:text-white border border-white/15 hover:border-amber-400/50 transition-colors"
                     >
-                      <span>GitHub Depomuz</span>
+                      <span>GitHub Sayfamız</span>
                       <ExternalLink className="size-3" />
                     </a>
                   </div>
