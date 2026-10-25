@@ -87,7 +87,7 @@ export const TEAM = {
   logo: "/images/ktt_logo.png",
   stats: [
     { value: "2026", label: "Şanlıurfa Pardus 3.'lüğümüz" },
-    { value: "Türkiye 3.'sü 🥉", label: "Hata Ayıklama Derecemiz" },
+    { value: "Türkiye 3.'sü ", label: "Hata Ayıklama Derecemiz" },
     { value: "4 Kişi", label: "Öğretmenimiz & 3 Öğrenci" },
     { value: "KTT", label: "Yahya Kaptan Anadolu Lisesi" },
   ],
@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
       "2026 Şanlıurfa Pardus Hata Ayıklama Yarışması finalinde Türkiye üçüncülüğü kazandık",
     ],
     technologies: ["Pardus", "Linux", "C", "GDB", "Valgrind", "Bash", "Açık Kaynak"],
-    status: "Tamamlandı (Türkiye 3.'sü Olduk 🥉)",
+    status: "Tamamlandı (Türkiye 3.'sü Olduk )",
     images: [
       {
         src: "/images/pardus_project.png",
@@ -203,7 +203,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: "pardus-hata-ayiklama-2026",
     competition: "Pardus Hata Ayıklama ve Öneri Yarışması",
     organization: "Pardus / TÜBİTAK ULAKBİM",
-    result: "Türkiye 3.'lüğü 🥉",
+    result: "Türkiye 3.'lüğü ",
     date: "2026",
     location: "Şanlıurfa",
     description:
@@ -256,7 +256,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     date: "2026",
     imageUrl: "/images/ktt_hero.jpg",
     description: "Şanlıurfa'da düzenlenen Pardus Hata Ayıklama ve Öneri Yarışması finalinde elde ettiğimiz Türkiye 3.'lüğü derecemiz.",
-    specs: ["Şanlıurfa", "TÜBİTAK ULAKBİM", "Türkiye 3.'lüğü 🥉"],
+    specs: ["Şanlıurfa", "TÜBİTAK ULAKBİM", "Türkiye 3.'lüğü "],
   },
   {
     id: "ktt-logo",

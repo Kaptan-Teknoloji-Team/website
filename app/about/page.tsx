@@ -171,7 +171,7 @@ export default function AboutPage() {
                 <dt className="text-muted-foreground text-xs font-medium uppercase tracking-wider">Resmi Derecemiz</dt>
                 <dd className="mt-1.5">
                   <span className="inline-flex items-center gap-1.5 rounded-lg border border-amber-600/35 bg-amber-500/15 px-3 py-1 text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-300 shadow-xs">
-                    2026 Şanlıurfa Pardus 3.&apos;lüğü 🥉
+                    2026 Şanlıurfa Pardus 3.&apos;lüğü 
                   </span>
                 </dd>
               </div>

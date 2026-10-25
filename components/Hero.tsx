@@ -80,7 +80,7 @@ export function Hero() {
               <span className="hidden sm:inline text-muted-foreground">•</span>
               <div className="flex items-center gap-1.5">
                 <Trophy className="h-4 w-4 text-amber-500" />
-                <span>2026 Şanlıurfa Pardus 3.&apos;lüğü 🥉</span>
+                <span>2026 Şanlıurfa Pardus 3.&apos;lüğü </span>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ export function Hero() {
                   </div>
                   <div className="absolute top-3 right-3">
                     <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-primary/20 border border-primary/40 text-primary">
-                      Türkiye 3.&apos;lüğü 🥉
+                      Türkiye 3.&apos;lüğü 
                     </span>
                   </div>
 
@@ -131,7 +131,7 @@ export function Hero() {
                     <p className="text-[10px] text-muted-foreground">Şanlıurfa Finali</p>
                   </div>
                   <div className="p-2 rounded-lg bg-card border border-border">
-                    <p className="text-primary font-bold text-sm">3.&apos;lük 🥉</p>
+                    <p className="text-primary font-bold text-sm">3.&apos;lük </p>
                     <p className="text-[10px] text-muted-foreground">Hata Ayıklama</p>
                   </div>
                   <div className="p-2 rounded-lg bg-card border border-border">
