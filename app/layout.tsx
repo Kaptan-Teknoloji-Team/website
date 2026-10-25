@@ -23,7 +23,11 @@ export const metadata: Metadata = {
   description: TEAM.tagline,
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="tr"
